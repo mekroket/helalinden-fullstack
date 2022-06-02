@@ -1,0 +1,66 @@
+<div class="container">
+  <h2>Uyeler</h2>
+  <button mat-fab aria-label="label" matTooltip="Uye  Ekle" color="primary" (click)="Ekle()">
+    <mat-icon aria-label>add</mat-icon>
+  </button>
+  <p>&nbsp;</p>
+
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="UyeId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> UyeId
+      </mat-header-cell>
+      <mat-cell *matCellDef="let uye"> {{uye.UyeId}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="UyeAdSoyad">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Uye Adı Soyadı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let uye"> {{uye.UyeAdSoyad}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="UyeEposta">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Uye Eposta
+      </mat-header-cell>
+      <mat-cell *matCellDef="let uye"> {{uye.UyeEposta}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="UyeParola">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Uye Parola
+      </mat-header-cell>
+      <mat-cell *matCellDef="let uye"> {{uye.UyeParola}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="UyeYetki">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Uye Yetki
+      </mat-header-cell>
+      <mat-cell *matCellDef="let uye"> {{uye.UyeYetki}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="detay">
+      <mat-header-cell *matHeaderCellDef> İşlemler
+      </mat-header-cell>
+      <mat-cell *matCellDef="let uye">
+        
+
+        <button mat-icon-button color="primary" matTooltip="Uye Düzenle" (click)="Duzenle(uye)">
+          <mat-icon aria-label="label">edit</mat-icon>
+        </button>
+
+        <button mat-icon-button color="warn" matTooltip="Uye Sil" (click)="Sil(uye)">
+          <mat-icon aria-label="label">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+  
+   
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" showFirstLastButtons="">
+  </mat-paginator>
+</div>

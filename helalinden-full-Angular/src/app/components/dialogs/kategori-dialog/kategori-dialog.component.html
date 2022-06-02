@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>{{dialogBaslik}}</span>
+  
+</mat-toolbar>
+<div class="container">
+   <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>KategoriAdı</mat-label>
+      <input matInput placeholder="KategoriAd" formControlName="KategoriAd" required>
+    </mat-form-field>
+
+    
+
+    
+    
+   </form> 
+</div>
+<p>&nbsp;</p>
+<button mat-raised-button color="primary"  (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close()">Kapat</button>&nbsp;

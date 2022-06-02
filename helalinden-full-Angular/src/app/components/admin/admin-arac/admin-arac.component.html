@@ -1,0 +1,73 @@
+<div class="container">
+  <h2>Araclar</h2>
+  <button mat-fab aria-label="label" matTooltip="Arac  Ekle" color="primary" (click)="Ekle()">
+    <mat-icon aria-label>add</mat-icon>
+  </button>
+  <p>&nbsp;</p>
+
+  <mat-form-field>
+    <mat-label >Kategori Seçiniz</mat-label>
+    <mat-select placeholder="Kategori Seçiniz" (selectionChange)="KategoriSec($event.value)">
+      <mat-option [value]="kat" *ngFor="let kat of kategoriler">{{kat.KategoriAd}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="AracKatId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Arac Kategori İd
+      </mat-header-cell>
+      <mat-cell *matCellDef="let arac">  # {{arac.AracKatId}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="AracAdi">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Arac Adı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let arac"> {{arac.AracAdi}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="AracFiyat">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Arac Fiyat (₺)
+      </mat-header-cell>
+      <mat-cell *matCellDef="let arac"> {{arac.AracFiyat}} ₺ </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="AracAciklama">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Arac Acıklama
+      </mat-header-cell>
+      <mat-cell *matCellDef="let arac" [innerHTML]="arac.AracAciklama">  </mat-cell> 
+    </ng-container>
+
+    <ng-container matColumnDef="AracKatAdi">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Arac Kategori Adı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let arac"> {{arac.AracKatAdi}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="detay">
+      <mat-header-cell *matHeaderCellDef> İşlemler
+      </mat-header-cell>
+      <mat-cell *matCellDef="let arac">
+        <button mat-icon-button color="primary" matTooltip="Arac Liste" (click)="Detay(arac)">
+          <mat-icon aria-label="label">search</mat-icon>
+        </button>
+
+        <button mat-icon-button color="primary" matTooltip="Arac Düzenle" (click)="Duzenle(arac)">
+          <mat-icon aria-label="label">edit</mat-icon>
+        </button>
+
+        <button mat-icon-button color="warn" matTooltip="Arac Sil" (click)="Sil(arac)">
+          <mat-icon aria-label="label">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+  
+   
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" showFirstLastButtons="">
+  </mat-paginator>
+</div>

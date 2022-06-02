@@ -1,0 +1,59 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>{{dialogBaslik}}</span>
+  
+</mat-toolbar>
+<div class="container">
+   <form [formGroup]="frm">
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>KiraTarih</mat-label>
+      <input matInput placeholder="KiraTarih" formControlName="KiraTarih" required>
+    </mat-form-field> -->
+
+    <h3>Hex Kodunuz <span style="color: red;">(Aracı Kiralamak İçin Gereklidir!) </span> </h3>
+    <button mat-raised-button color="primary" > Kişiselleştirilmiş Hex Kodunuz  ( <span style="color:goldenrod;">{{uyeid}}</span> ) </button> &nbsp; &nbsp; <br> <br>
+
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tarih Seç</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="KiraTarih">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>KiraSure</mat-label>
+      <input matInput placeholder="KiraSure" formControlName="KiraSure" required>
+    </mat-form-field> -->
+    <br>
+    <mat-label>Kira Süresi (Gün)</mat-label> &nbsp;
+    <mat-slider  appearance="outline" formControlName="KiraSure" thumbLabel [displayWith]="formatLabel" tickInterval="100" step="1" min="0" max="100" aria-label="units"></mat-slider>
+    <br>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Hex Kodunuz</mat-label>
+      <input matInput placeholder="Hex Kodunuz" formControlName="KiraUyeId" required>
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>KiraUcret</mat-label>
+      <input matInput placeholder="KiraUcret" formControlName="KiraUcret" required>
+    </mat-form-field> -->
+
+    <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Ücret Giriniz</mat-label>
+      <input matInput type="number" class="example-right-align"  formControlName="KiraUcret" required>
+      <span matPrefix>₺&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+
+   </form> 
+</div>
+<p>&nbsp;</p>
+<button mat-raised-button color="primary"  (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close()">Kapat</button>&nbsp;

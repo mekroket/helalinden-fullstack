@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="home.component.scss">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel" style="z-index: 0;">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(assets/audigif.gif)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">En Hızlı Arac  <span>Kiralama</span></h2>
+              <p class="animate__animated animate__fadeInUp">Size en uygun aracı kolayca seçip kiralayabilirsiniz</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto" [routerLink]="['/araclar']" *ngIf="apiServis.yetkiKontrol(['Uye','Admin'])"> Araç Kirala</a>
+            </div>
+          </div>
+        </div>
+
+        
+
+        
+        
+
+      </div>
+
+      
+
+    </div>
+  </section><!-- End Hero -->
+
+
+
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>En İyİ Markalar Sizin İçin Burda</h2>
+            <h3>Hızlı ve güvenilir araç kiralama</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Mayıs ayına özel tüm araç gruplarında 7 gün kirala 4 gün öde fırsatı!
+              Rezervasyonlarınızı yukarıdaki kampanya alanımızı kullanarak  veya  0850 20000000 Numaralı rezervasyon merkezimizi arayarak yapabilirsiniz.
+              Genel araç kiralama koşulları geçerlidir.
+              31 Mayıs 2022 tarihine kadar geçerlidir.
+              Başka kampanya, promosyon ve tekliflerle birleştirilemez.
+              0850 00000000 numaralı Çağrı Merkezi'mizi arayabilirsin
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Araç kiralama dünyasının global çaplı, en başarılı isimlerden biri olarak size ayrıcalıklı ve konforlu bir hizmet vermek için buradayız.</li>
+              <li><i class="ri-check-double-line"></i> Tercihlerinize uygun aracı bulmanız için geniş filtreleme seçenekleri sunuyoruz.</li>
+              <li><i class="ri-check-double-line"></i> Sizi başka sitelere yönlendirmeden işlemlerinizi kolayca yapmanızı sağlıyoruz.</li>
+            </ul>
+            <p class="fst-italic">
+              Farklı firmalara ait onlarca araçta size en uygun araçları listeliyoruz.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+        <div class="container">
+  
+          <div class="row">
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="assets/audi.png" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="assets/toyota.png" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="assets/ford.png" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="assets/volskwagen.png" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="assets/nissan.png" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="assets/honda.png" class="img-fluid" alt="">
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Clients Section -->

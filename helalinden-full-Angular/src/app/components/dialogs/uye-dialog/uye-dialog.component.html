@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>{{dialogBaslik}}</span>
+  
+</mat-toolbar>
+<div class="container">
+   <form [formGroup]="frm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>UyeAdSoyad</mat-label>
+      <input matInput placeholder="UyeAdSoyad" formControlName="UyeAdSoyad" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>UyeEposta</mat-label>
+      <input matInput placeholder="UyeEposta" formControlName="UyeEposta" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>UyeParola</mat-label>
+      <input matInput placeholder="UyeParola" formControlName="UyeParola" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" *ngIf="apiServis.oturumKontrol()">
+      <mat-label>UyeYetki</mat-label>
+      <input matInput placeholder="UyeYetki" formControlName="UyeYetki" required >
+    </mat-form-field>
+   </form> 
+</div>
+<p>&nbsp;</p>
+<button mat-raised-button color="primary"  (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close()">Kapat</button>&nbsp;

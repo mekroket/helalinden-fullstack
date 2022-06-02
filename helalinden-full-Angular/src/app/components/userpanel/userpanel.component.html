@@ -1,0 +1,38 @@
+<mat-card class="example-card" style="margin: auto; margin-top:50px;" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image" > <img src="assets/user.png" alt=""  style="width: 40px; height: 40px;" > </div>
+    <mat-card-title > Adı Soyadı :  <span style="color: royalblue;">{{uye.UyeAdSoyad}}</span> </mat-card-title>
+    <mat-card-subtitle> Uye Epostası :  <span style="color: royalblue;">{{uye.UyeEposta}}</span> </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+       Uye Parola :  <span style="color: royalblue;">{{uye.UyeParola}}</span> 
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+     Uye Yetki Durumu : <span style="color: royalblue;">{{uye.UyeYetki}}</span> 
+    
+  </mat-card-actions>
+</mat-card>
+
+
+
+<div class="container" style="text-align: center; margin-top: 100px;" >
+    <h1 > <span style="color: royalblue;">{{uye?.UyeAdSoyad}} </span> Adlı Üyeye Ait Kiralarr</h1>
+    <h2  *ngIf="kiralar?.length == 0">Bu Üyeye Ait Kiralanan Araç Yok.</h2>
+    <div *ngFor="let kira of kiralar">
+      <h3>  <span style="color: blue;">Aracın Kira Ücreti :</span> <span style="font-weight: bold;"> {{kira.KiraUcret}} ₺</span>   </h3>
+      <p>
+        <b> <span style="color: red;">Kira Süresi :</span>     </b>  {{kira.KiraSure}} Gün &nbsp;&nbsp;
+        <b> <span style="color: red;"> Kiralama Tarihi :</span>  </b> {{kira.KiraTarih | date: 'dd.MM.yyyy HH:mm:ss'}}&nbsp;&nbsp;
+      </p>
+      <hr>
+    </div>
+  
+</div>
+
+
+
+
+

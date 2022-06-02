@@ -1,0 +1,68 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>{{dialogBaslik}}</span>
+  
+</mat-toolbar>
+<div class="container" *ngIf="islem!='detay'">
+   <form [formGroup]="frm">
+
+    <h3>Kategori İdleri</h3>
+    <button mat-raised-button color="primary" *ngFor="let kat of kategoriler" style="margin-right: 10px;"> #{{kat.KategoriId}}  </button> &nbsp; &nbsp; <br> <br>
+    <h3>Araç Türleri</h3>
+    <button mat-raised-button  color="grey" *ngFor="let kat of kategoriler" style="margin-right: 10px; background-color: orange; color: white;"> {{kat.KategoriAd}} &nbsp;</button>&nbsp;&nbsp;
+    <br><br>
+
+    <mat-form-field appearance="outline">
+      <mat-select placeholder="Kategori Seçiniz" >
+        <mat-option [value]="kat.KategoriId" *ngFor="let kat of kategoriler">{{kat.KategoriAd}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>AracKatId</mat-label>
+      <input matInput placeholder="AracKatId" formControlName="AracKatId" required>
+    </mat-form-field>
+
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>AracAdı</mat-label>
+      <input matInput placeholder="AracAdi" formControlName="AracAdi" required>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>Arac Fiyat</mat-label>
+      <input matInput placeholder="AracFiyat" formControlName="AracFiyat" required>
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>AracAciklama</mat-label>
+      <input matInput placeholder="AracAciklama" formControlName="AracAciklama" required>
+    </mat-form-field> -->
+
+    <!-- <mat-form-field class="example-full-width" appearance="outline" style="width: 900px;">
+      <mat-label>Araç Açıklaması</mat-label>
+      <textarea matInput placeholder="AracAciklama"></textarea>
+    </mat-form-field> -->
+    <br> <br> <br> 
+    <jodit-editor [config]="Jconfig" formControlName="AracAciklama" >
+
+    </jodit-editor>
+    <br> <br>
+    <button mat-raised-button color="primary"  (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+    <button mat-raised-button color="warn" (click)="dialogRef.close()">Kapat</button>&nbsp;
+
+
+   </form> 
+</div>
+<p>&nbsp;</p>
+
+<div class="container" *ngIf="islem=='detay'">
+  <div>
+    <img src="assets/arac2.jpg" alt="" style="width: 900px; height: 458px;">
+    <h2>{{yeniKayit.AracAdi}}</h2>
+    <div div [innerHTML]="yeniKayit.AracAciklama"></div>
+    <p>{{yeniKayit.AracFiyat}}  ₺ </p>
+  </div>
+</div>
+
+

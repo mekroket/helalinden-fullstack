@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69ab428d08154c82974d117ae3f4ce25" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="DB01Model.Araclar" Width="1.5" PointX="7.125" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB01Model.Foto" Width="1.5" PointX="9.375" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB01Model.Kategoriler" Width="1.5" PointX="7" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB01Model.Kiralama" Width="1.5" PointX="4.625" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB01Model.Uyeler" Width="1.5" PointX="1.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="DB01Model.FK_Araclar_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DB01Model.FK_Foto_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DB01Model.FK_Kiralama_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DB01Model.FK_Kiralama_ToTable_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

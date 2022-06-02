@@ -1,0 +1,54 @@
+<div class="container">
+  <h2>Kategoriler</h2>
+  <button mat-fab aria-label="label" matTooltip="Kategori Ekle" color="primary" (click)="Ekle()">
+    <mat-icon aria-label>add</mat-icon>
+  </button>
+  <p>&nbsp;</p>
+
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="KategoriId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>  Kategoriİd
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit">  # {{kayit.KategoriId}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="KategoriAd">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Kategori Adı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.KategoriAd}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="KatAracSay">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Kategori Sayısı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> ( {{kayit.KatAracSay}} ) </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="detay">
+      <mat-header-cell *matHeaderCellDef> İşlemler
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit">
+        <button mat-icon-button color="primary" matTooltip="Arac Liste" [routerLink]="['/admin/arac',kayit.KategoriId]">
+          <mat-icon aria-label="label">list</mat-icon>
+        </button>
+
+        <button mat-icon-button color="primary" matTooltip="Katagori Düzenle" (click)="Duzenle(kayit)">
+          <mat-icon aria-label="label">edit</mat-icon>
+        </button>
+
+        <button mat-icon-button color="warn" matTooltip="Kategori Sil" (click)="Sil(kayit)">
+          <mat-icon aria-label="label">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+  
+   
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" showFirstLastButtons="">
+  </mat-paginator>
+</div>

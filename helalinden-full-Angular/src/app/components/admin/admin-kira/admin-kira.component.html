@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Kira Ekleme Paneli</h1>
+  <h2>Kiralar</h2>
+  <button mat-fab aria-label="label" matTooltip="Kira  Ekle" color="primary" (click)="Ekle()">
+    <mat-icon aria-label>add</mat-icon>
+  </button>
+  <p>&nbsp;</p>
+
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <ng-container matColumnDef="KiraTarih">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Kira Tarihi
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kira"> {{kira.KiraTarih | date:'dd.MM.yyyy HH:mm:ss'}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="KiraSure">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Kiralanan Süre
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kira"> {{kira.KiraSure}} Gün </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="KiraUyeId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Kira Uye İd
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kira"> ( {{kira.KiraUyeId}} ) </mat-cell>
+    </ng-container>
+    
+    
+
+    <ng-container matColumnDef="KiraUcret">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Kira Ücreti (₺)
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kira"> {{kira.KiraUcret}} ₺ </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="detay">
+      <mat-header-cell *matHeaderCellDef> İşlemler
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kira">
+        
+
+        <button mat-icon-button color="primary" matTooltip="Kira Düzenle" (click)="Duzenle(kira)">
+          <mat-icon aria-label="label">edit</mat-icon>
+        </button>
+
+        <button mat-icon-button color="warn" matTooltip="Kira Sil" (click)="Sil(kira)">
+          <mat-icon aria-label="label">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+  
+   
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" showFirstLastButtons="">
+  </mat-paginator>
+</div>
