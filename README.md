@@ -1,7 +1,7 @@
 # Helalinden Full Stack Dev
 ## Ödev İçi Kodlar ve Görüntüleri
 ## Oğuz Kaan Ekin 20211129075 Final Ödevi / Akdeniz Üniversitesi
-# Rent a Car Asp.Net ne Angular
+# Rent a Car Asp.Net ve Angular
 Bu proje Angular ve Asp.Net ile yapılan araç kiralama sitesidir
 
 ## Site İçi Görüntüler
