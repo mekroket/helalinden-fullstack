@@ -12,6 +12,10 @@ Bu proje Angular ve Asp.Net ile yapılan araç kiralama sitesidir
 
 [![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-02-165427.png)](https://www.linkpicture.com/view.php?img=LPic6298c1f6453f3191706640)
 
+[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-11-004232.png)](https://www.linkpicture.com/view.php?img=LPic62a3bb00c4fdb1833672718)
+
+[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-11-004301.png)](https://www.linkpicture.com/view.php?img=LPic62a3bb19d650c331211159)
+
 ## Veritabanı Tablosu
 
 [![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-04-30-000706.png)](https://www.linkpicture.com/view.php?img=LPic626c543477ff2565562207)
