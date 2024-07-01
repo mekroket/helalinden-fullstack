@@ -4,9 +4,8 @@
 # Rent a Car Asp.Net ve Angular
 Bu proje Angular ve Asp.Net ile yapılan araç kiralama sitesidir
 
-## Site İçi Tanıtım Videosu
+[![Proje Tanıtım Videosu](https://img.youtube.com/vi/iL6KhIoCkqs/0.jpg)](https://www.youtube.com/watch?v=iL6KhIoCkqs)
 
-[![video](https://www.youtube.com/watch?v=iL6KhIoCkqs)
 
 
 ## Veritabanı Tablosu
