@@ -7,14 +7,6 @@ Bu proje Angular ve Asp.Net ile yapılan araç kiralama sitesidir
 [![Proje Tanıtım Videosu](https://img.youtube.com/vi/iL6KhIoCkqs/0.jpg)](https://www.youtube.com/watch?v=iL6KhIoCkqs)
 
 
-
-## Veritabanı Tablosu
-
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-04-30-000706.png)](https://www.linkpicture.com/view.php?img=LPic626c543477ff2565562207)
-
-## Swagger Tablosu
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-04-30-000534.png)](https://www.linkpicture.com/view.php?img=LPic626c540d533ed1936085912)
-
 ## Amaç
 ```
 Projede amaç asp.net ve angular ile araç kiralama sitesi yapmaktır.
