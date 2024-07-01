@@ -25,6 +25,9 @@ Projede amaç, ASP.NET ve Angular kullanarak işlevsel bir araç kiralama sitesi
 
 ## Swaagger
 ![Swagger Görüntüsü](https://github.com/mekroket/helalinden-dev1/blob/master/swagger.png)
+## Veritabanı Tablosu
+
+[![VeriTabanı](https://github.com/mekroket/helalinden-dev1/blob/master/verisemasi.png)
 
 
 ## Kurulum (Installation)
