@@ -4,17 +4,10 @@
 # Rent a Car Asp.Net ve Angular
 Bu proje Angular ve Asp.Net ile yapılan araç kiralama sitesidir
 
-## Site İçi Görüntüler
+## Site İçi Tanıtım Videosu
 
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-02-165512.png)](https://www.linkpicture.com/view.php?img=LPic6298c1a6b5e7d1689474574)
+[![video](https://www.youtube.com/watch?v=iL6KhIoCkqs)
 
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-02-165446.png)](https://www.linkpicture.com/view.php?img=LPic6298c1daa50351436870882)
-
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-02-165427.png)](https://www.linkpicture.com/view.php?img=LPic6298c1f6453f3191706640)
-
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-11-004232.png)](https://www.linkpicture.com/view.php?img=LPic62a3bb00c4fdb1833672718)
-
-[![image](https://www.linkpicture.com/q/Ekran-goruntusu-2022-06-11-004301.png)](https://www.linkpicture.com/view.php?img=LPic62a3bb19d650c331211159)
 
 ## Veritabanı Tablosu
 
