@@ -23,6 +23,10 @@ Projede amaç, ASP.NET ve Angular kullanarak işlevsel bir araç kiralama sitesi
   - Araç kiralama
   - Kullanıcı ve araç bilgilerini yönetme
 
+## Swaagger
+![Swagger Görüntüsü](https://github.com/mekroket/helalinden-dev1/blob/master/swagger.png)
+
+
 ## Kurulum (Installation)
 Aşağıdaki linki klonlayarak bilgisayarınızda kodları inceleyebilir ve çalıştırabilirsiniz.
 ```bash
